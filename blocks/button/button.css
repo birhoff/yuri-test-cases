@@ -1,0 +1,9 @@
+.case-button {
+    text-shadow: 0 1px 0 #ddd;
+    cursor: pointer;
+    display: inline-block;
+    background: transparent url(../images/buttons/buttons.png);
+    white-space: nowrap;
+    border: 0;
+    text-decoration: none;
+}
