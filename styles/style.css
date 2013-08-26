@@ -1,0 +1,21 @@
+body {
+    background: url(../images/background-pattern.png) 0 0 repeat;
+}
+
+.sheet {
+    background: #fff;
+    padding: 0;
+    width: 40%;
+    margin: 5% auto;
+    box-shadow: 0 1px 2px gray inset;
+    border-radius: 8px;
+    color: #888888;
+}
+
+.block {
+    height: 300px;
+}
+
+.block--button {
+    text-align: center;
+}
