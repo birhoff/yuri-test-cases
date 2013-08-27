@@ -1,9 +1,82 @@
 .case-button {
+    /* clear <button> styles */
+    border: none;
+    padding: 0;
+
+    margin: 0 8px;
     text-shadow: 0 1px 0 #ddd;
     cursor: pointer;
     display: inline-block;
-    background: transparent url(../images/buttons/buttons.png);
+    background: url(images/def-button.png) repeat-x 0 -120px;
+    height: 24px;
+    line-height: 24px;
     white-space: nowrap;
-    border: 0;
     text-decoration: none;
+    outline: none;
+    position: relative;
+     /* CSS3 for comfort of new browsers */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: -moz-none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.case-button:before {
+    position: absolute;
+    height: 24px;
+    width: 8px;
+    background: url(images/def-button.png) -10px -96px no-repeat;
+    content: '';
+    display: block;
+    top: 0;
+    right: 100%;
+}
+
+.case-button:after {
+    position: absolute;
+    height: 24px;
+    width: 8px;
+    background: url(images/def-button.png) 0 -96px no-repeat;
+    content: '';
+    display: block;
+    top: 0;
+    left: 100%;
+}
+
+.case-button:hover {
+    background-position: 0 -72px;
+}
+
+.case-button:hover:before {
+    background-position: -10px -48px;
+}
+
+.case-button:hover:after {
+    background-position: 0 -48px;
+}
+
+.case-button:focus {
+    background-position: 0 -24px;
+}
+
+.case-button:focus:before {
+    background-position: -10px 0;
+}
+
+.case-button:focus:after {
+    background-position: 0 0;
+}
+
+.case-button:active {
+    background-position: 0 -168px;
+}
+
+.case-button:active:before {
+    background-position: -10px -145px;
+}
+
+.case-button:active:after {
+    background-position: 0 -145px;
 }
