@@ -1,0 +1,8 @@
+all: 
+  shadow: distance 1px blur 0 size 0 opacity 0.75 angle 90 
+  color black font verdana regular 11pt
+  
+active: 
+  angle -90
+  
+  
