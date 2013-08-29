@@ -4,14 +4,15 @@
     text-decoration: none;
     white-space: nowrap;
     outline: none;
+    overflow: visible; /* for IE button tag */
 
     margin: 0 8px;
     padding: 0 8px;
     cursor: pointer;
     display: inline-block;
     background: url(images/def-button.png) repeat-x 0 -120px;
-    height: 24px;
-    line-height: 24px;
+    height: 23px;
+    line-height: 23px;
     position: relative;
 
     vertical-align: middle;
@@ -35,7 +36,7 @@
 
 .case-button:before {
     position: absolute;
-    height: 24px;
+    height: 23px;
     width: 8px;
     background: url(images/def-button.png) -10px -96px no-repeat;
     content: '';
@@ -46,7 +47,7 @@
 
 .case-button:after {
     position: absolute;
-    height: 24px;
+    height: 23px;
     width: 8px;
     background: url(images/def-button.png) 0 -96px no-repeat;
     content: '';

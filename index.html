@@ -4,13 +4,41 @@
     <title></title>
     <link media='screen' rel='stylesheet' type='text/css' href='styles/style.css'/>
     <link media='screen' rel='stylesheet' type='text/css' href='blocks/button/button.css'/>
+    <link media='screen' rel='stylesheet' type='text/css' href='blocks/progress/progressBar.css'/>
+
+    <script type="text/javascript" src="libs/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="blocks/progress/progressBar.js"></script>
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            var progressBar = new ProgressBar($("#progress1"), {width: '100px'});
+
+            $("#start-progress-btn").on("click", function (ev) {
+                var timeout = 1000,
+                        currentValue = 0;
+
+                ev.preventDefault();
+
+                progressBar.value(currentValue);
+                setTimeout(function updateValue() {
+                    if (currentValue >= 100) return;
+                    currentValue++;
+                    progressBar.value(currentValue);
+                    timeout /= 1.05;
+                    setTimeout(updateValue, timeout);
+                }, timeout);
+            });
+
+        });
+    </script>
+
 </head>
 <body>
 <div class="sheet">
-    <div class="block block--button">
+    <div class="block">
         <h2>Buttons</h2>
 
-        <div class="block--button--layout">
+        <div class="block--layout">
             <div class="layout--row">
                 <div class="layout--cell cell--left">
                     <h4 style="margin: 0">Tag name</h4>
@@ -55,6 +83,16 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <div class="block">
+        <h2>Progress</h2>
+
+        <div>
+            <a href="#" id="start-progress-btn" class="case-button">Start</a>
+
+            <div id="progress1"></div>
         </div>
     </div>
 </div>
