@@ -11,7 +11,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            var progressBar = new ProgressBar($("#progress1"), {width: '100px'});
+            var progressBar = new ProgressBar($("#progress1"));
 
             $("#start-progress-btn").on("click", function (ev) {
                 var timeout = 1000,
@@ -100,9 +100,8 @@
     <div class="block">
         <h2>Progress</h2>
 
-        <div>
+        <div style="padding: 10px">
             <a href="#" id="start-progress-btn" class="case-button">Start</a>
-
             <div id="progress1"></div>
         </div>
     </div>

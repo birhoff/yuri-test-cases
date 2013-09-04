@@ -48,7 +48,7 @@
     };
 
     ProgressBar.defaults = {
-        width: "100px"
+        width: "100%"
     };
 
     window.ProgressBar = ProgressBar;
