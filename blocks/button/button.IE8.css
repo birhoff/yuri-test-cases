@@ -1,0 +1,94 @@
+.case-button {
+    /* clear styles */
+    border: none;
+    text-decoration: none;
+    white-space: nowrap;
+    outline: none;
+    overflow: visible; /* for IE button tag */
+
+    margin: 0 8px;
+    padding: 0 8px;
+    cursor: pointer;
+    display: inline-block;
+    background: url(images/def-button.png) repeat-x 0 -120px;
+    height: 23px;
+    line-height: 23px;
+    position: relative;
+
+    vertical-align: middle;
+    text-align: center;
+    font-size: 11px;
+    font-weight: normal;
+    font-style: normal;
+    font-family: verdana, arial;
+    color: #000;
+    /* CSS3 for comfort of new browsers */
+    text-shadow: 0px 1px 0px #000; /* fallback */
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.26);
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: -moz-none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.case-button:before {
+    position: absolute;
+    height: 23px;
+    width: 8px;
+    background: url(images/def-button.png) -10px -96px no-repeat;
+    content: '';
+    display: block;
+    top: 0;
+    right: 100%;
+}
+
+.case-button:after {
+    position: absolute;
+    height: 23px;
+    width: 8px;
+    background: url(images/def-button.png) 0 -96px no-repeat;
+    content: '';
+    display: block;
+    top: 0;
+    left: 100%;
+}
+
+.case-button:hover {
+    background-position: 0 -72px;
+}
+
+.case-button:hover:before {
+    background-position: -10px -48px;
+}
+
+.case-button:hover:after {
+    background-position: 0 -48px;
+}
+
+.case-button:focus {
+    background-position: 0 -24px;
+}
+
+.case-button:focus:before {
+    background-position: -10px 0;
+}
+
+.case-button:focus:after {
+    background-position: 0 0;
+}
+
+.case-button:active {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.26);
+    background-position: 0 -168px;
+}
+
+.case-button:active:before {
+    background-position: -10px -145px;
+}
+
+.case-button:active:after {
+    background-position: 0 -145px;
+}

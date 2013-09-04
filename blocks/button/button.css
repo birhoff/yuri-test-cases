@@ -1,30 +1,44 @@
 .case-button {
     /* clear styles */
     border: none;
+    margin: 0;
+    padding: 0 10px;
+    border-radius: 10px;
+
     text-decoration: none;
     white-space: nowrap;
     outline: none;
     overflow: visible; /* for IE button tag */
 
-    margin: 0 8px;
-    padding: 0 8px;
     cursor: pointer;
     display: inline-block;
-    background: url(images/def-button.png) repeat-x 0 -120px;
-    height: 23px;
-    line-height: 23px;
+
+    height: 20px;
     position: relative;
+    box-sizing: border-box;
 
     vertical-align: middle;
     text-align: center;
-    font-size: 11px;
-    font-weight: normal;
-    font-style: normal;
-    font-family: verdana, arial;
+    font: normal normal 11px/20px verdana, arial;
     color: #000;
     /* CSS3 for comfort of new browsers */
-    text-shadow: 0px 1px 0px #000; /* fallback */
-    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.26);
+
+    text-shadow: 1px 0px 0px #000; /* fallback */
+    text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.26);
+
+    -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.35);
+       -moz-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.35);
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.35);
+
+    background: rgb(242,242,242); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(242,242,242,1) 30%, rgba(226,226,226,1) 70%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,rgba(242,242,242,1)), color-stop(70%,rgba(226,226,226,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(242,242,242,1) 30%,rgba(226,226,226,1) 70%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(242,242,242,1) 30%,rgba(226,226,226,1) 70%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(242,242,242,1) 30%,rgba(226,226,226,1) 70%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(242,242,242,1) 30%,rgba(226,226,226,1) 70%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#e2e2e2',GradientType=0 ); /* IE6-9 */
+
 
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -34,61 +48,37 @@
             user-select: none;
 }
 
-.case-button:before {
-    position: absolute;
-    height: 23px;
-    width: 8px;
-    background: url(images/def-button.png) -10px -96px no-repeat;
-    content: '';
-    display: block;
-    top: 0;
-    right: 100%;
-}
-
-.case-button:after {
-    position: absolute;
-    height: 23px;
-    width: 8px;
-    background: url(images/def-button.png) 0 -96px no-repeat;
-    content: '';
-    display: block;
-    top: 0;
-    left: 100%;
-}
-
 .case-button:hover {
-    background-position: 0 -72px;
-}
+    background: rgb(254,255,235); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(254,255,235,1) 30%, rgba(253,255,204,1) 70%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,rgba(254,255,235,1)), color-stop(70%,rgba(253,255,204,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(254,255,235,1) 30%,rgba(253,255,204,1) 70%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(254,255,235,1) 30%,rgba(253,255,204,1) 70%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(254,255,235,1) 30%,rgba(253,255,204,1) 70%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(254,255,235,1) 30%,rgba(253,255,204,1) 70%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffeb', endColorstr='#fdffcc',GradientType=0 ); /* IE6-9 */
 
-.case-button:hover:before {
-    background-position: -10px -48px;
-}
-
-.case-button:hover:after {
-    background-position: 0 -48px;
 }
 
 .case-button:focus {
-    background-position: 0 -24px;
-}
-
-.case-button:focus:before {
-    background-position: -10px 0;
-}
-
-.case-button:focus:after {
-    background-position: 0 0;
+    -webkit-box-shadow: 0px 0px 4px rgba(0, 35, 214, 0.94);
+       -moz-box-shadow: 0px 0px 4px rgba(0, 35, 214, 0.94);
+            box-shadow: 0px 0px 4px rgba(0, 35, 214, 0.94);
 }
 
 .case-button:active {
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.26);
-    background-position: 0 -168px;
+    -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.35), inset 2px 0px 0px 3px rgba(0, 0, 0, 0.26);
+    -moz-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.35), inset 2px 0px 0px 3px rgba(0, 0, 0, 0.26);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.35), inset 0px 2px 3px rgba(0, 0, 0, 0.26);
+
+    background: rgb(242,242,242); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(242,242,242,1) 30%, rgba(226,226,226,1) 70%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,rgba(242,242,242,1)), color-stop(70%,rgba(226,226,226,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(242,242,242,1) 30%,rgba(226,226,226,1) 70%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(242,242,242,1) 30%,rgba(226,226,226,1) 70%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(242,242,242,1) 30%,rgba(226,226,226,1) 70%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(242,242,242,1) 30%,rgba(226,226,226,1) 70%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#e2e2e2',GradientType=0 ); /* IE6-9 */
 }
 
-.case-button:active:before {
-    background-position: -10px -145px;
-}
-
-.case-button:active:after {
-    background-position: 0 -145px;
-}
+.case-button::-moz-focus-inner {border:0;}
