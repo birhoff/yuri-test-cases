@@ -1,63 +1,35 @@
 .progress-bar {
-    margin: 0;
-    padding: 0 10px;
-    border-radius: 10px;
-    box-sizing: border-box;
+     margin: 0;
+     padding: 0 10px;
+     border-radius: 10px;
+     box-sizing: border-box;
 
-    display: inline-block;
-    position: relative;
-    height: 13px;
+     display: inline-block;
+     position: relative;
+     height: 13px;
 
-    vertical-align: middle;
-    text-align: center;
-
-    background: #fff;
-
-    -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.29);
-       -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.29);
-            box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.29);
-
-}
-
-.progress-bar .progress-bar__label {
     color: #000;
     font: normal normal 9px/13px verdana, arial;
 
     text-shadow: 1px 0px 0px #000; /* fallback */
     text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.26);
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+     vertical-align: middle;
+     text-align: center;
 
-    z-index: 100;
-}
+    background: rgb(171,255,88) no-repeat border-box; /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(171,255,88,1) 0%, rgba(40,191,20,1) 51%, rgba(139,218,26,1) 86%, rgba(40,191,20,1) 100%) no-repeat border-box; /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(171,255,88,1)), color-stop(51%,rgba(40,191,20,1)), color-stop(86%,rgba(139,218,26,1)), color-stop(100%,rgba(40,191,20,1))) no-repeat border-box; /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(171,255,88,1) 0%,rgba(40,191,20,1) 51%,rgba(139,218,26,1) 86%,rgba(40,191,20,1) 100%) no-repeat border-box; /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(171,255,88,1) 0%,rgba(40,191,20,1) 51%,rgba(139,218,26,1) 86%,rgba(40,191,20,1) 100%) no-repeat border-box; /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(171,255,88,1) 0%,rgba(40,191,20,1) 51%,rgba(139,218,26,1) 86%,rgba(40,191,20,1) 100%) no-repeat border-box; /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(171,255,88,1) 0%,rgba(40,191,20,1) 51%,rgba(139,218,26,1) 86%,rgba(40,191,20,1) 100%) no-repeat border-box; /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#abff58', endColorstr='#28bf14',GradientType=0 ) no-repeat border-box; /* IE6-9 */
+    background-size: 0% 100%;
 
-.progress-bar .progress-bar__indicator {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    display: none;
+     -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.29);
+     -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.29);
+     box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.29);
 
-    padding: 0 10px;
-    border-radius: 10px;
-
-    background: rgb(171,255,88); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(171,255,88,1) 0%, rgba(40,191,20,1) 51%, rgba(139,218,26,1) 86%, rgba(40,191,20,1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(171,255,88,1)), color-stop(51%,rgba(40,191,20,1)), color-stop(86%,rgba(139,218,26,1)), color-stop(100%,rgba(40,191,20,1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(171,255,88,1) 0%,rgba(40,191,20,1) 51%,rgba(139,218,26,1) 86%,rgba(40,191,20,1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(171,255,88,1) 0%,rgba(40,191,20,1) 51%,rgba(139,218,26,1) 86%,rgba(40,191,20,1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(171,255,88,1) 0%,rgba(40,191,20,1) 51%,rgba(139,218,26,1) 86%,rgba(40,191,20,1) 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(171,255,88,1) 0%,rgba(40,191,20,1) 51%,rgba(139,218,26,1) 86%,rgba(40,191,20,1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#abff58', endColorstr='#28bf14',GradientType=0 ); /* IE6-9 */
-
-    z-index: 50;
-}
-
-.progress-bar .progress-bar__indicator.active {
-    display: block;
-}
+ }
 
